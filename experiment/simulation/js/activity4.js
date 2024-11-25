@@ -16,10 +16,25 @@ function activity4() {
     }
 }
 function activity4_method_1() {
-    let activity4_tab_headings = ['Sr No.', 'Current (Ampere)', 'Magnetic Field (Gauss)', "Check"];
+    let activity4_tab_headings = [
+        'Sr No.',
+        'Current (Ampere)',
+        'Magnetic Field (Gauss)',
+        'Check',
+    ];
     let verify_row = [
-        ['1', `${data1[0][0]}`, `<input type='text' class='form-control' id='b-inp-1' />`, `<input type='button' class='btn btn-primary' id='verify-1' value='verify' onclick='verify_m1(1);' />`],
-        ['2', `${data1[0][1]}`, `<input type='text' class='form-control' id='b-inp-2' />`, `<input type='button' class='btn btn-primary' id='verify-2' value='verify' onclick='verify_m1(2);' />`]
+        [
+            '1',
+            `${data1[0][0]}`,
+            `<input type='text' class='form-control' id='b-inp-1' />`,
+            `<input type='button' class='btn btn-primary' id='verify-1' value='verify' onclick='verify_m1(1);' />`,
+        ],
+        [
+            '2',
+            `${data1[0][1]}`,
+            `<input type='text' class='form-control' id='b-inp-2' />`,
+            `<input type='button' class='btn btn-primary' id='verify-2' value='verify' onclick='verify_m1(2);' />`,
+        ],
     ];
     let table = new Table(activity4_tab_headings, verify_row);
     pp.addtoleftpannel(table.template);
@@ -28,12 +43,12 @@ function activity4_method_1() {
 let first_verified = false;
 let second_verified = false;
 function verify_m1(num) {
-    let inp1 = document.getElementById('b-inp-1');
-    let inp2 = document.getElementById('b-inp-2');
+    let inp1 = (document.getElementById('b-inp-1'));
+    let inp2 = (document.getElementById('b-inp-2'));
     if (num == 1) {
         console.log(data1[0][1], parseFloat(inp1.value));
         if (!verify_values(data1[0][1], parseFloat(inp1.value))) {
-            alert("first values is not correct!!");
+            alert('first values is not correct!!');
             return;
         }
         alert('first value is correct');
@@ -41,20 +56,24 @@ function verify_m1(num) {
     }
     if (num == 2) {
         if (!verify_values(data1[1][1], parseFloat(inp2.value))) {
-            alert("Second value is not correct!!");
+            alert('Second value is not correct!!');
             return;
         }
         second_verified = true;
     }
     if (first_verified && second_verified) {
-        alert("Both values are correct");
+        alert('Both values are correct');
         display_first_table();
     }
     return;
 }
 function display_first_table() {
     pp.clearleftpannel();
-    let activity4_tab_headings = ['Sr No.', 'Current (Ampere)', 'Magnetic Field (Gauss)'];
+    let activity4_tab_headings = [
+        'Sr No.',
+        'Current (Ampere)',
+        'Magnetic Field (Gauss)',
+    ];
     let t_data = [];
     for (let i = 0; i < data1.length; i++) {
         t_data[i] = [];
@@ -67,14 +86,20 @@ function display_first_table() {
     table.draw();
 }
 function activity4_method_2() {
-    let activity4_tab_headings = ['Sr No.', 'Current (Ampere)', 'Magnetic Field (Gauss)', 'Hall voltage VH(mV) value', "Check"];
+    let activity4_tab_headings = [
+        'Sr No.',
+        'Current (Ampere)',
+        'Magnetic Field (Gauss)',
+        'Hall voltage VH(mV) value',
+        'Check',
+    ];
     let verify_row = [
         [
             '1',
             `${sel_data[0][1]}`,
             `<input type='text' class='form-control' id='m2-a4-1' />`,
             `<input type='text' class='form-control' id='m2-a4-2' />`,
-            `<input type='button' class='btn btn-primary' id='m2-a4-verify' ' value='verify' onclick='verify_m2();' />`
+            `<input type='button' class='btn btn-primary' id='m2-a4-verify' ' value='verify' onclick='verify_m2();' />`,
         ],
     ];
     let table = new Table(activity4_tab_headings, verify_row);
@@ -82,8 +107,8 @@ function activity4_method_2() {
     table.draw();
 }
 function verify_m2() {
-    let val2 = document.getElementById('m2-a4-1');
-    let val3 = document.getElementById('m2-a4-2');
+    let val2 = (document.getElementById('m2-a4-1'));
+    let val3 = (document.getElementById('m2-a4-2'));
     console.log(sel_data[0][2], sel_data[0][1 + selected_field_current]);
     if (!verify_values(parseFloat(val2.value), sel_data[0][2])) {
         alert('Magnetic Field value is incorrect');
@@ -93,12 +118,17 @@ function verify_m2() {
         alert('vh value is incorrect');
         return;
     }
-    alert("All entered values are are correct!!");
+    alert('All entered values are are correct!!');
     display_second_table();
 }
 function display_second_table() {
     pp.clearleftpannel();
-    let activity4_tab_headings = ['Sr No.', 'Current (Ampere)', 'Magnetic Field (Gauss)', 'Hall voltage VH(mV) value'];
+    let activity4_tab_headings = [
+        'Sr No.',
+        'Current (Ampere)',
+        'Magnetic Field (Gauss)',
+        'Hall voltage VH(mV) value',
+    ];
     let edited_table = [];
     for (let i = 0; i < sel_data.length; i++) {
         edited_table[i] = [];
@@ -107,7 +137,7 @@ function display_second_table() {
         edited_table[i][2] = sel_data[i][2];
         edited_table[i][3] = sel_data[i][1 + selected_field_current];
     }
-    let table = new Table2(activity4_tab_headings, edited_table, "m2-tab-head", "m2-tab-body", `${selected_material} base thickness ${selected_thickness}`);
+    let table = new Table2(activity4_tab_headings, edited_table, 'm2-tab-head', 'm2-tab-body', `${selected_material} base thickness ${selected_thickness}`);
     pp.addtoleftpannel(table.template);
     table.draw();
 }
@@ -124,18 +154,34 @@ function activity4_method_3() {
     </div>
     `, 3);
     MathJax.typeset();
-    let activity4_tab_headings = ['Sr No.', 'I = Current through sample (mA)', 'Hall voltage VH(mV) values for different magnetic filed (varying the electromagnet current)', "rh", "Check"];
+    let activity4_tab_headings = [
+        'Sr No.',
+        'I = Current through sample (mA)',
+        'Hall voltage VH(mV) values for different magnetic filed (varying the electromagnet current)',
+        'rh',
+        'Check',
+    ];
     for (let i = 0; i < sel_data2.length; i++) {
-        let res = sel_data2[i][1 + selected_field_current_m3] * selected_field_current_m3 * selected_b / selected_thickness_m3;
+        let res = (sel_data2[i][1 + selected_field_current_m3] *
+            selected_field_current_m3 *
+            selected_b) /
+            selected_thickness_m3;
         sel_data2[i].push(res);
+    }
+    for (let i = 0; i < third_obs_data.length; i++) {
+        let res = ((parseFloat(third_obs_data[i][2]) *
+            selected_field_current *
+            selected_b) /
+            selected_thickness).toFixed(0);
+        third_obs_data[i].push(res.toString());
     }
     let verify_row = [
         [
             '1',
-            `${sel_data2[0][1]}`,
+            `${third_obs_data[0][1]}`,
             `<input type='text' class='form-control' id='m3-a4-1' />`,
             `<input type='text' class='form-control' id='m3-a4-2' />`,
-            `<input type='button' class='btn btn-primary' id='m3-a4-verify' ' value='verify' onclick='verify_m3();' />`
+            `<input type='button' class='btn btn-primary' id='m3-a4-verify' ' value='verify' onclick='verify_m3();' />`,
         ],
     ];
     let table = new Table(activity4_tab_headings, verify_row);
@@ -143,32 +189,38 @@ function activity4_method_3() {
     table.draw();
 }
 function verify_m3() {
-    let val2 = document.getElementById('m3-a4-1');
-    let val3 = document.getElementById('m3-a4-2');
-    console.log(sel_data2[0][1 + selected_field_current_m3], sel_data2[0][5]);
-    if (!verify_values(parseFloat(val2.value), sel_data2[0][1 + selected_field_current_m3])) {
+    let val2 = (document.getElementById('m3-a4-1'));
+    let val3 = (document.getElementById('m3-a4-2'));
+    console.log(third_obs_data[0][2], third_obs_data[0][3]);
+    if (!verify_values(parseFloat(val2.value), parseFloat(third_obs_data[0][2]))) {
         alert('vh value is incorrect!!');
         return;
     }
-    if (!verify_values(parseFloat(val3.value), sel_data2[0][5])) {
+    if (!verify_values(parseFloat(val3.value), parseFloat(third_obs_data[0][3]))) {
         alert('rh values is incorrect!!');
         return;
     }
-    alert("All entered values are are correct!!");
+    alert('All entered values are are correct!!');
     display_third_table();
 }
 function display_third_table() {
     pp.clearleftpannel();
-    let activity4_tab_headings = ['Sr No.', 'I = Current through sample (mA)', 'Hall voltage VH(mV) values for different magnetic field (varying the electromagnet current)', "rh"];
+    pp.showdescription('', 3);
+    let activity4_tab_headings = [
+        'Sr No.',
+        'I = Current through sample (mA)',
+        'Hall voltage VH(mV) values for different magnetic field (varying the electromagnet current)',
+        'rh',
+    ];
     let edited_table = [];
-    for (let i = 0; i < sel_data2.length; i++) {
+    for (let i = 0; i < third_obs_data.length; i++) {
         edited_table[i] = [];
-        edited_table[i][0] = sel_data2[i][0];
-        edited_table[i][1] = sel_data2[i][1];
-        edited_table[i][2] = sel_data2[i][1 + selected_field_current];
-        edited_table[i][3] = sel_data2[i][5].toFixed(2);
+        edited_table[i][0] = third_obs_data[i][0];
+        edited_table[i][1] = third_obs_data[i][1];
+        edited_table[i][2] = third_obs_data[i][2];
+        edited_table[i][3] = third_obs_data[i][3];
     }
-    let table = new Table2(activity4_tab_headings, edited_table, "m3-tab-head", "m3-tab-body", `${selected_material_m3} base thickness ${selected_thickness_m3}`);
+    let table = new Table2(activity4_tab_headings, edited_table, 'm3-tab-head', 'm3-tab-body', `${selected_material_m3} base thickness ${selected_thickness_m3}`);
     pp.addtoleftpannel(table.template);
     table.draw();
 }
