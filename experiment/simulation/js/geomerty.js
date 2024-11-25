@@ -474,6 +474,8 @@ var Chemistry;
                     return (true);
                 }
             }
+            console.log(point.x, this.stpt.x * lscale - this.dx / 2 * lscale, this.stpt.x * lscale + this.dx / 2 * lscale);
+            console.log(point.y, this.stpt.y * lscale - this.dy / 2 * lscale, this.stpt.y * lscale + this.dy / 2 * lscale);
             return (false);
         }
         motion_x() {
@@ -730,5 +732,41 @@ var Chemistry;
         }
     }
     Chemistry.Arrow = Arrow;
+    class Needle extends Geometry {
+        constructor(x, y, l, w, angle, color, canvas) {
+            super();
+            this.needleLength = 150;
+            this.needleWidth = 4;
+            this.needleColor = "red";
+            this.needleX = 0;
+            this.needleY = 0;
+            this.angleInRadians = 0; // in radians
+            this.stpt = new Point(x, y);
+            this.angleInRadians = angle * (Math.PI / 180);
+            this.needleLength = l;
+            this.needleWidth = w;
+            this.needleColor = color;
+            this.canvas = canvas;
+            this.context = this.canvas.getContext('2d');
+        }
+        draw() {
+            // angleInDegrees = 45; // Change this angle as needed
+            // angleInRadians = (angleInDegrees - 90) * (Math.PI / 180);
+            // this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+            // Calculate the end point of the needle
+            this.needleX = this.stpt.x * lscale + (this.needleLength * lscale) * Math.cos(this.angleInRadians);
+            this.needleY = this.stpt.y * lscale + (this.needleLength * lscale) * Math.sin(this.angleInRadians);
+            // Draw the needle
+            this.context.beginPath();
+            this.context.moveTo(this.stpt.x * lscale, this.stpt.y * lscale);
+            this.context.lineTo(this.needleX, this.needleY);
+            // this.context.moveTo(1, 1);
+            // this.context.lineTo(this.canvas.width, this.canvas.height);
+            this.context.lineWidth = this.needleWidth * lscale;
+            this.context.strokeStyle = this.needleColor;
+            this.context.stroke();
+        }
+    }
+    Chemistry.Needle = Needle;
 })(Chemistry || (Chemistry = {}));
 //# sourceMappingURL=geomerty.js.map

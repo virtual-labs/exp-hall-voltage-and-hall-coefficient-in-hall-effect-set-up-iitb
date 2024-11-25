@@ -4,7 +4,7 @@ function activity3() {
     pp.addoffcanvas(3);
     pp.showtitle('Determination of Hall voltage, and Hall coefficient in Hall effect set up', 3);
     let left_panel_text = `
-        <div id='act3-left-content'>
+        <div id='act3-left-content' style='height: 100%; overflow: auto;'>
             <label for="">Select the activity</label>
             <select name="" id="first-dd" class="form-select" onchange="select_dataset();">
                 <option value='' >--Select Activity--</option>
@@ -15,6 +15,8 @@ function activity3() {
 
             <br>
 
+            <div id='act-spec-img' ></div>
+
             <div id='choose-i'></div>
         </div>
     `;
@@ -22,8 +24,10 @@ function activity3() {
 }
 function select_dataset() {
     let first_dd = document.getElementById('first-dd');
+    let img_container = document.getElementById('act-spec-img');
     let val = first_dd.value;
     if (val == '') {
+        img_container.innerHTML = ``;
         return;
     }
     if (document.getElementById('choose-i')) {
@@ -32,14 +36,20 @@ function select_dataset() {
     if (val == 'data1') {
         method = 1;
         activity3_method_1();
+        img_container.innerHTML = `<img src="./images/assembly/Seq02.webp" style='margin-left: 30%; width: 268px; height: 222px;' alt="">`;
+        // activity2();
     }
     if (val == "data2") {
         method = 2;
         activity3_method_2();
+        img_container.innerHTML = `<img src="./images/assembly/Seq04.webp" style='margin-left: 30%; width: 268px; height: 222px;' alt="">`;
+        // activity21();
     }
     if (val == "data3") {
         method = 3;
         activity3_method_3();
+        img_container.innerHTML = `<img src="./images/assembly/Seq04.webp" style='margin-left: 30%; width: 268px; height: 222px;' alt="">`;
+        // activity22();
     }
 }
 function activity3_method_1() {
@@ -54,7 +64,7 @@ function activity3_method_1() {
         <br>
 
         <div>
-        <button id="act4_btn" class="btn btn-primary" onclick="activity4();" style="position: absolute; bottom: 12vh; width: 85%;">Next</button>
+        <button id="act4_btn" class="btn btn-primary" onclick="activity2();" style="position: absolute; bottom: 12vh; width: 85%;">Next</button>
         </div>
 
     `;
@@ -174,7 +184,7 @@ function a3_show_slider() {
 
     <br><br>
 
-    <button disabled class='btn btn-primary' onclick='activity4()' id='m2-a3-a4' >Next</button>
+    <button disabled class='btn btn-primary' onclick='activity21();' id='m2-a3-a4' >Next</button>
     `;
 }
 function show_m2() {
@@ -234,6 +244,7 @@ function set_m3(num) {
         let material_ele = document.getElementById('a3-m3-2');
         if (material_ele.value != '') {
             selected_material_m3 = material_ele.value;
+            selected_material = selected_material_m3;
         }
         else {
             return;
@@ -243,6 +254,7 @@ function set_m3(num) {
         let thickness_ele = document.getElementById('a3-m3-3');
         if (thickness_ele.value != '') {
             selected_thickness_m3 = parseFloat(thickness_ele.value);
+            selected_thickness = selected_thickness_m3;
         }
         else {
             return;
@@ -252,6 +264,7 @@ function set_m3(num) {
         let current_ele = document.getElementById('a3-m3-4');
         if (current_ele.value != '') {
             selected_field_current_m3 = parseInt(current_ele.value);
+            selected_field_current = selected_field_current_m3;
             let btn = document.getElementById('a3-m3-btn-2');
             if (current_ele.value == '1') {
                 selected_b = 2166;
@@ -293,7 +306,7 @@ function a3_m3_show_slider() {
 
     <br><br>
 
-    <button disabled class='btn btn-primary' onclick='activity4()' id='m3-a3-a4' >Next</button>
+    <button disabled class='btn btn-primary' onclick='activity22();' id='m3-a3-a4' >Next</button>
     `;
 }
 function show_m3() {
@@ -305,5 +318,5 @@ function show_m3() {
     let btn = document.getElementById("m3-a3-a4");
     btn.disabled = false;
 }
-activity3();
+//activity3();
 //# sourceMappingURL=activity3.js.map

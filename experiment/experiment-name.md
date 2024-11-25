@@ -1,1 +1,1 @@
-## Experiment name
+## Determination of Hall voltage, and Hall coefficient in Hall effect set up
