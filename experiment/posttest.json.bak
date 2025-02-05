@@ -1,0 +1,47 @@
+[
+   {
+      "question": "What is the Hall coefficient in the Hall effect experiment?",
+      "qid": 1,
+      "option_a": "The ratio of Hall voltage to magnetic field strength",
+      "option_b": "The ratio of Hall voltage to current passing through the conductor",
+      "option_c": "The ratio of charge carrier density to conductor's length",
+      "option_d": "The ratio of Hall voltage to temperature",
+      "correct_option": "a"
+   },
+   {
+      "question": "In the Hall effect experiment, if the direction of the magnetic field is changed while keeping other parameters constant, what will happen to the Hall voltage?",
+      "qid": 2,
+      "option_a": "The magnitude of the Hall voltage as well as the direction of the Hall voltage remains the same.",
+      "option_b": "The Hall voltage will decrease.",
+      "option_c": "The magnitude of the Hall voltage remains the same, but the direction of the Hall voltage reverses.",
+      "option_d": "The Hall voltage will fluctuate randomly.",
+      "correct_option": "c"
+   },
+   {
+      "question": "During the Hall effect experiment, if the current passing through the conductor is increased, what effect will it have on the Hall voltage?",
+      "qid": 3,
+      "option_a": "The Hall voltage will increase.",
+      "option_b": "The Hall voltage will decrease.",
+      "option_c": "The Hall voltage will remain the same.",
+      "option_d": "The Hall voltage will become zero.",
+      "correct_option": "a"
+   },
+   {
+      "question": "If the magnetic field is turned off during the Hall effect experiment while keeping other parameters unchanged, what will happen to the Hall voltage?",
+      "qid": 4,
+      "option_a": "The Hall voltage will increase.",
+      "option_b": "The Hall voltage will decrease.",
+      "option_c": "The Hall voltage will remain the same.",
+      "option_d": "The Hall voltage will become zero.",
+      "correct_option": "d"
+   },
+   {
+      "question": "During the Hall effect experiment, if the temperature of the conductor is increased, what effect will it have on the Hall voltage?",
+      "qid": 5,
+      "option_a": "The Hall voltage will increase.",
+      "option_b": "The Hall voltage will decrease.",
+      "option_c": "The Hall voltage will remain the same.",
+      "option_d": "The Hall voltage will become zero.",
+      "correct_option": "b"
+   }
+]

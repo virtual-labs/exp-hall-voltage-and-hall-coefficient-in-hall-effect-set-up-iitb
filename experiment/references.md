@@ -1,21 +1,24 @@
-## Reference Books
+<h3>Reference Books</h3>
+<ol type='1'>
 
-1. Practical Physics, 4th Edition
-G. L. Squires, Cambridge university press
+<li> Practical Physics, 4th Edition
+G. L. Squires, Cambridge university press </li> 
 
-2. Advanced Practical Physics
+<li>  Advanced Practical Physics
 by B.L. Worsnop, H. T. Flint
-Khosla publication house
+Khosla publication house </li> 
 
-3. The Art of Experimental Physics 1st Edition, Wiley Publications
-by Daryl W. Preston, Eric R. Dietz
+<li>  The Art of Experimental Physics 1st Edition, Wiley Publications
+by Daryl W. Preston, Eric R. Dietz </li> 
 
-4. High School and Undergraduate Physics Practicals With 3D Simulations
-Robert Lucas, 1st Edition, CRC Press Publications
+<li>  High School and Undergraduate Physics Practicals With 3D Simulations
+Robert Lucas, 1st Edition, CRC Press Publications </li> 
 
-5. A Textbook Of Practical Physics
-Indu Prakash, Ram Krishna, A. K. Jha, Kitab Mahal
+<li>  A Textbook Of Practical Physics
+Indu Prakash, Ram Krishna, A. K. Jha, Kitab Mahal </li> 
 
-6. A Textbook of Practical Physics
+<li>  A Textbook of Practical Physics
 S. Balasubramanian, R. Ranganathan, M.N. Srinivasan
-Sultan Chand & Sons
+Sultan Chand & Sons </li> 
+
+</ol>
