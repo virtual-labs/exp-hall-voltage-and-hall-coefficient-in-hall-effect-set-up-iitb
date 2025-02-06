@@ -1,0 +1,47 @@
+[
+   {
+      "question": "In the Hall Effect experiment, what is the primary mechanism responsible for the generation of the Hall voltage?",
+      "qid": 1,
+      "option_a": "The magnetic field inducing an electric current in the conductor",
+      "option_b": "The Hall sensor measuring the magnetic field strength",
+      "option_c": "The Lorentz force deflecting the charge carriers’ perpendicular to both the current and the magnetic field",
+      "option_d": "The charge separation caused by the Lorentz force, creating a potential difference across the conductor",
+      "correct_option": "d"
+   },
+   {
+      "question": "Which of the following parameters affects the magnitude of the Hall voltage in the Hall Effect experiment?",
+      "qid": 2,
+      "option_a": "The length of the conductor",
+      "option_b": "The temperature of the conductor",
+      "option_c": "The magnetic field strength",
+      "option_d": "The resistance of the conductor",
+      "correct_option": "c"
+   },
+   {
+      "question": "What is the relationship between the Hall voltage and the magnetic field direction in the Hall effect experiment?",
+      "qid": 3,
+      "option_a": "The Hall voltage is in the same direction as the magnetic field.",
+      "option_b": "The Hall voltage is perpendicular to both the current and the magnetic field.",
+      "option_c": "The Hall voltage is opposite to the magnetic field direction.",
+      "option_d": "The Hall voltage is parallel to the current direction.",
+      "correct_option": "b"
+   },
+   {
+      "question": "Which of the following materials would be most suitable for observing a strong Hall effect?",
+      "qid": 4,
+      "option_a": "A non-magnetic metal",
+      "option_b": "A superconductor",
+      "option_c": "A semiconductor with low carrier density",
+      "option_d": "A semiconductor with high carrier density",
+      "correct_option": "d"
+   },
+   {
+      "question": "In the Hall effect experiment, what is the role of the magnetic field?",
+      "qid": 5,
+      "option_a": "To induce electric currents in the conductor",
+      "option_b": "To create a potential difference across the conductor",
+      "option_c": "To provide a force to deflect the charge carriers",
+      "option_d": "To measure the temperature of the conductor",
+      "correct_option": "c"
+   }
+]
