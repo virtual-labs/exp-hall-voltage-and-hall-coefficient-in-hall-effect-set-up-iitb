@@ -36,7 +36,7 @@ function select_dataset() {
     if (val == 'data1') {
         method = 1;
         activity3_method_1();
-        img_container.innerHTML = `<img src="./images/assembly/Seq02.webp" style='margin-left: 30%; width: 268px; height: 222px;' alt="">`;
+        img_container.innerHTML = `<img src="./images/assembly/Seq03.webp" style='margin-left: 30%; width: 268px; height: 222px;' alt="">`;
         // activity2();
     }
     if (val == "data2") {
