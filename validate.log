@@ -1,0 +1,14 @@
+{
+  _: [],
+  f: [
+    '/home/runner/work/exp-hall-voltage-and-hall-coefficient-in-hall-effect-set-up-iitb/exp-hall-voltage-and-hall-coefficient-in-hall-effect-set-up-iitb/experiment-descriptor.json'
+  ],
+  files: [
+    '/home/runner/work/exp-hall-voltage-and-hall-coefficient-in-hall-effect-set-up-iitb/exp-hall-voltage-and-hall-coefficient-in-hall-effect-set-up-iitb/experiment-descriptor.json'
+  ],
+  '$0': 'validate'
+}
+Json Error: There are additional experiment properties
+Json Error: must match "then" schema
+Failed while validating /home/runner/work/exp-hall-voltage-and-hall-coefficient-in-hall-effect-set-up-iitb/exp-hall-voltage-and-hall-coefficient-in-hall-effect-set-up-iitb/experiment-descriptor.json
+Error: Schema is Invalid
